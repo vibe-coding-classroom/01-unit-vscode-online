@@ -1,5 +1,3 @@
-Viewed 01-unit-vscode-online.html:1-600
-
 針對 **`01-unit-vscode-online` (VS Code Online 快速啟動)** 單元，這個單元的 Assignments (作業) 目標是讓學生理解「瀏覽器即開發環境」的操作流程。
 
 以下是在 **GitHub Classroom** 部署這三個實戰任務的具體建議：
