@@ -1,0 +1,14 @@
+{
+  "tests": [
+    {
+      "name": "Cloud Build Lab Test",
+      "setup": "npm install",
+      "run": "node cloud-test.js > test-result.log && grep '雲端環境運行成功' test-result.log",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 100
+    }
+  ]
+}

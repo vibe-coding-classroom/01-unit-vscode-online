@@ -1,0 +1,12 @@
+{
+    "name": "Node.js & GitHub Codespaces Lab",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node:0-18",
+    "postCreateCommand": "npm install",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dbaeumer.vscode-eslint"
+            ]
+        }
+    }
+}

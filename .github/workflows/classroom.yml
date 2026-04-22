@@ -1,0 +1,34 @@
+name: GitHub Classroom Workflow
+
+on: [push]
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  build:
+    name: Autograding
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      - name: Autograding Reporter
+        uses: education/autograding-grading-reporter@v1
+        env:
+          CLOUD-BUILD-LAB-TEST_RESULTS: "${{steps.cloud-build-lab-test.outputs.result}}"
+        with:
+          runners: cloud-build-lab-test
+      - name: Cloud Build Lab Test
+        id: cloud-build-lab-test
+        uses: education/autograding-command-grader@v1
+        with:
+          test-name: Cloud Build Lab Test
+          setup-command: npm install
+          command: node cloud-test.js > test-result.log && grep '雲端環境運行成功' test-result.log
+          timeout: 1
+          max-score: 100

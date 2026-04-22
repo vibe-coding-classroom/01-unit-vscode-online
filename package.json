@@ -1,0 +1,12 @@
+{
+  "name": "01-unit-vscode-online",
+  "version": "1.0.0",
+  "description": "VS Code Online & Codespaces Lab",
+  "main": "src/main.js",
+  "scripts": {
+    "test-cloud": "node cloud-test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
